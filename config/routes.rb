@@ -1,15 +1,9 @@
 Messagerie::Application.routes.draw do
   get "users/new"
-<<<<<<< HEAD
 
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new'
-=======
-  root to: 'static_pages#home'
-  match '/signup',  to: 'users#new'
 
-
->>>>>>> filling-in-layout
 
 
   # The priority is based upon order of creation:
