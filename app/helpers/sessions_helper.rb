@@ -27,6 +27,11 @@ module SessionsHelper
     end
   end
 
+  def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_path) unless current_user?(@user)
+    end
+
   def sign_out
     current_user = nil
     cookies.delete(:remember_token)
